@@ -332,7 +332,7 @@ class RenderSliverStaggeredGrid extends RenderSliverVariableSizeBoxAdaptor {
       if (!hasTrailingScrollOffset) {
         // Layout the child to compute its tailingScrollOffset.
         final constraints =
-            BoxConstraints.tightFor(width: geometry.crossAxisExtent);
+            BoxConstraints.tightFor(width: geometry.mainAxisExtent);
         child = addAndLayoutChild(index, constraints, parentUsesSize: true);
         geometry = geometry.copyWith(mainAxisExtent: paintExtentOf(child!));
       }
